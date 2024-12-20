@@ -172,3 +172,19 @@ function startGame() {
     drawGrid();
     drawPiece();
 }
+
+// Завершение игры
+function endGame() {
+    if (gameLoop) {
+        clearInterval(gameLoop);
+        gameLoop = null;
+        context.fillStyle = 'rgba(0, 0, 0, 0.5)';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        
+        context.fillStyle = 'white';
+        context.font = '30px Arial';
+        context.textAlign = 'center';
+        context.fillText('Игра окончена!', canvas.width / 2, canvas.height / 2 - 30);
+        context.fillText(`Счёт: ${score}`, canvas.width / 2, canvas.height / 2 + 30);
+    }
+}

@@ -44,3 +44,11 @@ button {
 button:hover {
     background-color: #555;
 }
+
+.end-button {
+    background-color: #c0392b;
+}
+
+.end-button:hover {
+    background-color: #e74c3c;
+}
